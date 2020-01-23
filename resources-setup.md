@@ -22,3 +22,7 @@ aeproject init
 aeproject node && aeproject compiler
 aeproject test
 ```
+
+# Example
+
+See [/node-docker-setup](/node-docker-setup) for setup of local node in separate network with local miner and compiler.
