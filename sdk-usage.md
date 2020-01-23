@@ -16,6 +16,11 @@ const client = await Universal({
                    secretKey: "..." }
     });
 ```
+ - generate keypair
+```javascript
+const Crypto = require("@aeternity/aepp-sdk").Crypto;
+console.log(Crypto.generateKeyPair());
+```
  - example contracts usage
 ```javascript
 const contractSouce = `
@@ -31,5 +36,5 @@ console.log("deployed contract at", init.address);
 
 await contract.methods.set(42);
 const result = await contract.methods.get();
-console.log("result get", result.decodedResult
+console.log("result get", result.decodedResult);
 ```
