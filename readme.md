@@ -28,7 +28,7 @@ http:
 fork_management:
   network_id: "ae_local_test"
 ```
- - `docker run -p 3013:3013 -p 3015:3015 -v $PWD/aeternity.yaml:/home/aeternity/.aeternity/aeternity/aeternity.yaml aeternity/aeternity`
+ - `docker run -p 3013:3013 -p 3113:3113 -v $PWD/aeternity.yaml:/home/aeternity/.aeternity/aeternity/aeternity.yaml aeternity/aeternity`
 
 ## Compiler
  - Sophia Language https://github.com/aeternity/protocol/blob/master/contracts/sophia.md
