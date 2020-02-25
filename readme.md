@@ -1,5 +1,13 @@
 # Aeternity Setup and Tooling
 
+## CLI
+
+```
+npm install -g @aeternity/aepp-cli
+aecli account create <name>
+aecli account address <name> --privateKey
+```
+
 ## Node
  - Node Documentation https://github.com/aeternity/aeternity/tree/master/docs
  - Run with docker `docker run -p 3013:3013 -p 3015:3015 -d aeternity/aeternity`
