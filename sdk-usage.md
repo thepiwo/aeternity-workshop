@@ -6,15 +6,21 @@ see [/sdk-example](/sdk-example)
  - or use from cdn `<script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>`
  - initialize client with node and compiler to connect to
 ```javascript
-const Universal = require("@aeternity/aepp-sdk").Universal;
+const {Universal, Node, MemoryAccount} = require("@aeternity/aepp-sdk");
+...
 const client = await Universal({
-        url: "http://localhost:3013",
-        internalUrl: "http://localhost:3113",
-        compilerUrl: "http://localhost:3080",
-        networkId: "ae_next",
-        keypair: { publicKey: "ak_hYi4bwaTo6NJtAkgKhqhU1Jz2P5VCWGvg2cLyRnDuG78yDS1J",
-                   secretKey: "..." }
-    });
+  nodes: [{
+    name: 'local test',
+    instance: await Node({url: "http://localhost:3013", internalUrl: "http://localhost:3113"})
+  }],
+  accounts: [MemoryAccount({
+    keypair: {
+      publicKey: "ak_Nk4vNXGCUHPBD9Qt2S6Vc9hzB6zK8GH9Kza1RUzmiLyMVy7JJ",
+      secretKey: "..."
+    }
+  )],
+  compilerUrl: "http://localhost:3080"
+});
 ```
  - generate keypair
 ```javascript
